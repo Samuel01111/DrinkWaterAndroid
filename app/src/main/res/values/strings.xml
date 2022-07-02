@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DrinkWater</string>
+    <string name="app_name_visual">to Lívia©</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_notification">Notificação</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Main Fragment</string>
+    <string name="second_fragment_label">Settings Fragment</string>
+    <string name="next">Next</string>
+    <string name="button_water_calculator">Calcular</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="hint_your_weight">Peso (Kg)</string>
+    <string name="hint_your_age">Idade (Ys)</string>
+
+    <string name="error_message_value_age_weight">Digite os valores corretamente.</string>
+    <string name="error_message_joke">Sim, ta escrito certo livia</string>
+</resources>

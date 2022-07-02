@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="br.com.smk.drinkwater.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/grandient_list"
+        tools:context=".MainFragment">
+
+        <EditText
+            android:id="@+id/text_your_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="44dp"
+            android:hint="@string/hint_your_weight"
+            android:inputType="number"
+            android:textColorHint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/text_your_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="84dp"
+            android:hint="@string/hint_your_age"
+            android:inputType="number"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/current_weight_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@{viewModel.currentWeight}"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/checkbox_exercises"
+            app:layout_constraintEnd_toEndOf="@+id/checkbox_exercises"
+            app:layout_constraintStart_toStartOf="@+id/checkbox_exercises"
+            tools:text="oi" />
+
+        <Button
+            android:id="@+id/button_calculator_water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/button_water_calculator"
+            app:layout_constraintEnd_toEndOf="@+id/checkbox_exercises"
+            app:layout_constraintStart_toStartOf="@+id/checkbox_exercises"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox_exercises" />
+
+        <Button
+            android:id="@+id/next_screen_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/checkbox_exercises"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="Pratico Exercicios"
+            app:layout_constraintEnd_toStartOf="@+id/text_your_age"
+            app:layout_constraintStart_toEndOf="@+id/text_your_weight"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_copyright_joke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/app_name_visual"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
